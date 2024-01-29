@@ -28,6 +28,6 @@ spec:
   http:
   - route:
     - destination:
-        host: {{ .Values.appname }}-vs.{{ .Values.namespace }}.svc.cluster.local # replace with your service FQDN
+        host: {{ .Values.appname }}-svc.{{ .Values.namespace }}.svc.cluster.local # replace with your service FQDN
         port:
           number: 80 # replace with your service port
