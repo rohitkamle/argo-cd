@@ -11,3 +11,24 @@ spec:
       port: {{ .Values.service.port }} 
       targetPort: {{ .Values.service.port }}
       name: http
+
+
+---
+
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ .Values.appname }}-vs
+  namespace: istio-system
+spec:
+  hosts:
+  - "argo.example.com"
+  gateways:
+  - istio-gateway # Name of the gateway created in the previous step
+  http:
+  - route:
+    - destination:
+        host: {{ .Values.appname }}-vs.{{ .Values.namespace }}.svc.cluster.local # replace with your service FQDN
+        port:
+          number: 80 # replace with your service port
