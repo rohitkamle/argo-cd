@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webapp-1
+  namespace: webapp1
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: webapp1
+  project: nginx-project
+  source:
+    repoURL: 'https://github.com/rohitkamle/argo-cd'
+    targetRevision: HEAD
+    path: apps/webapp2/helm-charts
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
