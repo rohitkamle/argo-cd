@@ -23,7 +23,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "argo.example.com"
+  - "{{ .Values.appname }}.example.com"
   gateways:
   - istio-gateway # Name of the gateway created in the previous step
   http:

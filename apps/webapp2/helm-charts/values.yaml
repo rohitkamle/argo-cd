@@ -1,9 +1,9 @@
 namespace: default
-appname: webapp1
+appname: webapp2
 replicaCount: 1
 image:
   artficate_repo: europe-west1-docker.pkg.dev/fabled-era-408608/artifact-repo-dev
-  repository: webapp1
+  repository: webapp2
   tag: latest
   pullPolicy: IfNotPresent
 resources:
