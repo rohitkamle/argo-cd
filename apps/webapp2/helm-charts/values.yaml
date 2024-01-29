@@ -1,4 +1,4 @@
-namespace: services
+namespace: default
 appname: webapp1
 replicaCount: 1
 image:
