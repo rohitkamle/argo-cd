@@ -8,28 +8,10 @@ spec:
   hosts:
   - "argo.example.com"
   gateways:
-  - istio-gateway
+  - istio-gateway # Name of the gateway created in the previous step
   http:
-  - match:
-    - uri:
-        prefix: "/"
-    route:
+  - route:
     - destination:
-        host: argo-cd-argocd-server.argo.svc.cluster.local
+        host: argo-cd-argocd-server.argo.svc.cluster.local # replace with your service FQDN
         port:
-          number: 80
-  - match:
-    - uri:
-        prefix: "/"
-    route:
-    - destination:
-        host: argo-cd-argocd-server.argo.svc.cluster.local
-        port:
-          number: 443
-      weight: 100
-    route:
-    - destination:
-        host: argo-cd-argocd-server.argo.svc.cluster.local
-        port:
-          number: 80
-      weight: 0
+          number: 443 # replace with your service port
