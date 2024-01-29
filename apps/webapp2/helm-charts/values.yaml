@@ -1,4 +1,5 @@
 appname: webapp2
+namespace: webapps
 replicaCount: 1
 image:
   artficate_repo: europe-west1-docker.pkg.dev/fabled-era-408608/artifact-repo-dev
