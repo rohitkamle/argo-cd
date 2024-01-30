@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: webapp
+  name: webapp1
 spec:
   destination:
     name: in-cluster
@@ -14,7 +14,6 @@ spec:
       valueFiles:
         - values.yaml
   sources: []
-  project: webapps
   syncPolicy:
     automated:
       prune: false

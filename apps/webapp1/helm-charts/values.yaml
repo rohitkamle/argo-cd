@@ -1,5 +1,4 @@
 appname: webapp1
-namespace: webapps
 replicaCount: 1
 image:
   artficate_repo: nginx
