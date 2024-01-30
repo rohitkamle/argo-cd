@@ -2,10 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: webapp1
+  namespace: argo
 spec:
   destination:
-    name: in-cluster
-    namespace: webapps
+    name: ''
+    namespace: new
+    server: 'https://kubernetes.default.svc'
   source:
     path: apps/webapp1/helm-charts
     repoURL: 'https://github.com/rohitkamle/argo-cd'
@@ -14,10 +16,11 @@ spec:
       valueFiles:
         - values.yaml
   sources: []
+  project: webapps
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: false
+      selfHeal: false
     syncOptions:
       - CreateNamespace=true
       - ServerSideApply=true
