@@ -1,27 +1,27 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-  labels:
-    argocd.argoproj.io/instance: app-of-apps
   name: webapp2
   namespace: argo
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name: in-cluster
     namespace: webapps
   source:
-    helm:
-      valueFiles:
-        - values.yaml
     path: apps/webapp2/helm-charts
     repoURL: 'https://github.com/rohitkamle/argo-cd'
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
   sources: []
+  project: webapps
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: false
+      selfHeal: false
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true

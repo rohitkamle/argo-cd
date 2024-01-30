@@ -3,8 +3,6 @@ kind: Application
 metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-  labels:
-    argocd.argoproj.io/instance: app-of-apps
   name: k8_config
   namespace: argo
 spec:
