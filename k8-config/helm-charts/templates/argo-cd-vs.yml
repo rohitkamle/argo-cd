@@ -8,7 +8,7 @@ spec:
   hosts:
   - "argocd.example.com"
   gateways:
-  - istio-gateway # Name of the gateway created in the previous step
+  - istio-gateway.istio-ingress.svc.cluster.local
   http:
   - route:
     - destination:
