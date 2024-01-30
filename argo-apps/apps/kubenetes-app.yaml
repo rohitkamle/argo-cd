@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: all-argo-apps
+  name: K8_Config
+  namespace: argo
 spec:
   destination:
-    name: ''
+    name: in-cluster
     namespace: default
-    server: 'https://kubernetes.default.svc'
   source:
-    path: argo-apps
+    path: k8_config
     repoURL: 'https://github.com/rohitkamle/argo-cd'
     targetRevision: HEAD
   sources: []
   project: default
   syncPolicy:
     automated:
-      prune: false
+      prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
