@@ -5,9 +5,8 @@ metadata:
   namespace: argo
 spec:
   destination:
-    name: ''
-    namespace: new
-    server: 'https://kubernetes.default.svc'
+    name: in-cluster
+    namespace: webapps
   source:
     path: apps/webapp1/helm-charts
     repoURL: 'https://github.com/rohitkamle/argo-cd'
