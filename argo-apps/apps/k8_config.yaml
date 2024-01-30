@@ -17,7 +17,8 @@ spec:
       valueFiles:
         - values.yaml
   sources: []
-  project: webapps
+  project: default
+
   syncPolicy:
     automated:
       prune: false
