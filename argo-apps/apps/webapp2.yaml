@@ -4,9 +4,8 @@ metadata:
   name: webapp2
 spec:
   destination:
-    name: ''
+    name: in-cluster
     namespace: webapps
-    server: 'https://kubernetes.default.svc'
   source:
     path: apps/webapp2/helm-charts
     repoURL: 'https://github.com/rohitkamle/argo-cd'
@@ -22,3 +21,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true
