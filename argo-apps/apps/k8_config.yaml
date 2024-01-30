@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8_config
+  name: k8-config
   namespace: argo
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -10,7 +10,7 @@ spec:
     name: in-cluster
     namespace: default
   source:
-    path: k8_config/helm-charts
+    path: k8-config/helm-charts
     repoURL: 'https://github.com/rohitkamle/argo-cd'
     targetRevision: HEAD
     helm:
