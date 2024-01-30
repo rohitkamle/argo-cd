@@ -1,23 +1,27 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
   name: k8_config
   namespace: argo
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name: in-cluster
     namespace: default
-  project: default
   source:
-    path: k8_config
+    path: k8_config/helm-charts
     repoURL: 'https://github.com/rohitkamle/argo-cd'
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
   sources: []
+  project: webapps
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: false
+      selfHeal: false
     syncOptions:
       - CreateNamespace=true
+      - ServerSideApply=true
