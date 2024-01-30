@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: webapp2
   namespace: argo
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name: in-cluster
