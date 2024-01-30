@@ -14,4 +14,4 @@ spec:
     - destination:
         host: argo-cd-argocd-server # replace with your service FQDN
         port:
-          number: 443 # replace with your service port
+          number: 80 # replace with your service port
