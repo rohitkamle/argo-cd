@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: K8_Config
+  name: k8_config
   namespace: argo
 spec:
   destination:
