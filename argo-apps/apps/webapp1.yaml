@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: new
+    namespace: webapps
   source:
     path: apps/webapp1/helm-charts
     repoURL: 'https://github.com/rohitkamle/argo-cd'
