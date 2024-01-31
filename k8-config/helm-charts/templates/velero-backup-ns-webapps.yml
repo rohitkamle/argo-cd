@@ -1,0 +1,19 @@
+apiVersion: velero.io/v1
+kind: Backup
+metadata:
+  name: webapps-backup
+    namespace: velero
+spec:
+  # Specify which namespaces to include in the backup
+  includedNamespaces:
+  - webapps
+  # Optionally, specify resources to exclude from the backup
+  # excludedResources:
+  # - resource: <resource_name>
+  #   group: <api_group>
+  #   kind: <resource_kind>
+  #   labelSelector: <label_selector>
+  # Specify additional options if needed
+  # options:
+  #   labelSelector: <label_selector>
+  #   snapshotVolumes: true  # Whether to snapshot persistent volumes
