@@ -15,18 +15,18 @@ spec:
 ---
 
 
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: {{ .Values.appname }}-vs
-spec:
-  hosts:
-  - "{{ .Values.appname }}.example.com"
-  gateways:
-  - istio-gateway.istio-ingress.svc.cluster.local
-  http:
-  - route:
-    - destination:
-        host: {{ .Values.appname }}-svc # replace with your service FQDN
-        port:
-          number: 80 # replace with your service port
+# apiVersion: networking.istio.io/v1alpha3
+# kind: VirtualService
+# metadata:
+#   name: {{ .Values.appname }}-vs
+# spec:
+#   hosts:
+#   - "{{ .Values.appname }}.example.com"
+#   gateways:
+#   - istio-gateway.istio-ingress.svc.cluster.local
+#   http:
+#   - route:
+#     - destination:
+#         host: {{ .Values.appname }}-svc # replace with your service FQDN
+#         port:
+#           number: 80 # replace with your service port
