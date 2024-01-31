@@ -2,7 +2,7 @@ apiVersion: velero.io/v1
 kind: Backup
 metadata:
   name: webapps-backup
-    namespace: velero
+  namespace: velero
 spec:
   # Specify which namespaces to include in the backup
   includedNamespaces:
