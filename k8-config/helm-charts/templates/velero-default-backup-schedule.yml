@@ -1,7 +1,7 @@
 apiVersion: velero.io/v1
 kind: Schedule
 metadata:
-  name: hourly_backup_ns_default
+  name: hourly-backup-ns-default
   namespace: velero
 spec:
   schedule: 0 * * * *
