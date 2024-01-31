@@ -1,13 +1,14 @@
 apiVersion: velero.io/v1
 kind: Schedule
 metadata:
-  name: hourly-backup-ns-webapps
+  name: hourly-backup-ns-default
   namespace: velero
 spec:
+#   schedule: 0 * * * * # this will run every hour
   schedule: "*/10 * * * *" # this will run every 10 mins
   template:
     includedNamespaces:
-    - 'webapps'
+    - 'default'
     excludedNamespaces:
     includedResources:
     - '*'
