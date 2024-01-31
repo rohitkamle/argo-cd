@@ -1,16 +1,16 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: kasten-vs
-  namespace: kasten-io
-spec:
-  hosts:
-  - "kasten.example.com"
-  gateways:
-  - istio-gateway.istio-ingress.svc.cluster.local
-  http:
-  - route:
-    - destination:
-        host: gateway # replace with your service FQDN
-        port:
-          number: 8000 # replace with your service port
+# apiVersion: networking.istio.io/v1alpha3
+# kind: VirtualService
+# metadata:
+#   name: kasten-vs
+#   namespace: kasten-io
+# spec:
+#   hosts:
+#   - "kasten.example.com"
+#   gateways:
+#   - istio-gateway.istio-ingress.svc.cluster.local
+#   http:
+#   - route:
+#     - destination:
+#         host: gateway # replace with your service FQDN
+#         port:
+#           number: 8000 # replace with your service port
