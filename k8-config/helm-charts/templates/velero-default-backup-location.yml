@@ -1,25 +1,25 @@
-apiVersion: velero.io/v1
-kind: BackupStorageLocation
-metadata:
-  creationTimestamp: "2024-01-31T10:15:20Z"
-  generation: 114
-  labels:
-    component: velero
-  name: default
-  namespace: velero
-  resourceVersion: "34542"
-  uid: 256986ca-fdd1-49c7-86f9-cf9f2526ded4
-spec:
-  config:
-    resourceGroup: RG-VELERO
-    storageAccount: rkvelerosa
-    subscriptionId: accb6dac-b557-4024-a6e3-126a2c96e215
-  default: true
-  objectStorage:
-    bucket: velero-backup
-  provider: azure
-  prefix: "aks-hub/"
-status:
-  lastSyncedTime: "2024-01-31T11:35:30Z"
-  lastValidationTime: "2024-01-31T11:35:40Z"
-  phase: Available
+# apiVersion: velero.io/v1
+# kind: BackupStorageLocation
+# metadata:
+#   creationTimestamp: "2024-01-31T10:15:20Z"
+#   generation: 114
+#   labels:
+#     component: velero
+#   name: default
+#   namespace: velero
+#   resourceVersion: "34542"
+#   uid: 256986ca-fdd1-49c7-86f9-cf9f2526ded4
+# spec:
+#   config:
+#     resourceGroup: RG-VELERO
+#     storageAccount: rkvelerosa
+#     subscriptionId: accb6dac-b557-4024-a6e3-126a2c96e215
+#   default: true
+#   objectStorage:
+#     bucket: velero-backup
+#   provider: azure
+#   prefix: "aks-hub/"
+# status:
+#   lastSyncedTime: "2024-01-31T11:35:30Z"
+#   lastValidationTime: "2024-01-31T11:35:40Z"
+#   phase: Available

@@ -1,11 +1,11 @@
-apiVersion: velero.io/v1
-kind: BackupStorageLocation
-metadata:
-  name: default
-spec:
-  provider: <provider_name>  # Specify the storage provider (e.g., aws, gcp, azure)
-  # Add any provider-specific configuration here
-  config:
-    <provider_specific_config>: <value>
-  # Customize the prefix for backup storage location
-  prefix: "aks-hub/"
+# apiVersion: velero.io/v1
+# kind: BackupStorageLocation
+# metadata:
+#   name: default
+# spec:
+#   provider: <provider_name>  # Specify the storage provider (e.g., aws, gcp, azure)
+#   # Add any provider-specific configuration here
+#   config:
+#     <provider_specific_config>: <value>
+#   # Customize the prefix for backup storage location
+#   prefix: "aks-hub/"

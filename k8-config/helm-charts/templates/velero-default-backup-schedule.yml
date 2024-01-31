@@ -4,7 +4,7 @@ metadata:
   name: hourly-backup-ns-default
   namespace: velero
 spec:
-  schedule: 0 * * * *
+  schedule: "*/10 * * * *" # this will run every 10 mins
   template:
     includedNamespaces:
     - 'default'
