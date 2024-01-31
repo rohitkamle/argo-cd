@@ -1,17 +1,17 @@
 
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: argocd-vs
-  namespace: argo
-spec:
-  hosts:
-  - "argocd.example.com"
-  gateways:
-  - istio-gateway.istio-ingress.svc.cluster.local
-  http:
-  - route:
-    - destination:
-        host: argo-cd-argocd-server # replace with your service FQDN
-        port:
-          number: 80 # replace with your service port
+# apiVersion: networking.istio.io/v1alpha3
+# kind: VirtualService
+# metadata:
+#   name: argocd-vs
+#   namespace: argocd
+# spec:
+#   hosts:
+#   - "argocd.example.com"
+#   gateways:
+#   - istio-gateway.istio-ingress.svc.cluster.local
+#   http:
+#   - route:
+#     - destination:
+#         host: argo-cd-argocd-server # replace with your service FQDN
+#         port:
+#           number: 80 # replace with your service port

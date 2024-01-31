@@ -1,17 +1,17 @@
 
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: kiali-vs
-  namespace: istio-system
-spec:
-  hosts:
-  - "kiali.example.com"
-  gateways:
-  - istio-gateway.istio-ingress.svc.cluster.local
-  http:
-  - route:
-    - destination:
-        host: kiali.istio-system.svc.cluster.local # replace with your service FQDN
-        port:
-          number: 9090 # replace with your service port
+# apiVersion: networking.istio.io/v1alpha3
+# kind: VirtualService
+# metadata:
+#   name: kiali-vs
+#   namespace: istio-system
+# spec:
+#   hosts:
+#   - "kiali.example.com"
+#   gateways:
+#   - istio-gateway.istio-ingress.svc.cluster.local
+#   http:
+#   - route:
+#     - destination:
+#         host: kiali.istio-system.svc.cluster.local # replace with your service FQDN
+#         port:
+#           number: 9090 # replace with your service port
