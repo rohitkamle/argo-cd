@@ -7,7 +7,7 @@ spec:
   schedule: "*/10 * * * *" # this will run every 10 mins
   template:
     includedNamespaces:
-    - 'default'
+    - 'webapps'
     excludedNamespaces:
     includedResources:
     - '*'
